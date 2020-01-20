@@ -43,7 +43,7 @@ export class PlayerComponent implements OnInit {
 
   delPlayer(){
     this.service.deletePlayer(this.profileForm.value).subscribe(res =>{
-      console.log(res)
+      console.log(res) //TEST
     })
   }
 }
