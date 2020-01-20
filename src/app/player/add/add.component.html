@@ -1,0 +1,7 @@
+<h3>Add Player</h3>
+<form [formGroup] = "profileForm" (ngSubmit) = "addPlayer()">
+    name: <input formControlName="name" type="text"> <br>
+    birth: <input formControlName="birth" type="Date"> <br>
+    highestScore: <input formControlName="highestScore" type="number"><br>
+    <button type = "submit">add</button>
+</form>

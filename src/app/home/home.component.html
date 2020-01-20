@@ -1,0 +1,20 @@
+<span [style.font-size] = 'fontSize' [style.color] = 'fontColor'>{{msg}}</span>
+<br>
+<input type="text" [(ngModel)] = 'msg2'>{{msg2}}
+
+<hr>
+
+name: {{name + " " +lanme}} <br>
+name: {{fullName}} <br>
+<input type="text" [(ngModel)] = 'name'> <br>
+<input type="text" [(ngModel)] = 'lanme'> <br>
+<button (click) = 'setName()'>Click Me!</button> <br>
+
+<br><hr><br>
+
+name: {{input1+ " + "+input2}} <br>
+sum: {{sum}}<br>
+<input type="number" [(ngModel)] = 'input1'> <br>
+<input type="number" [(ngModel)] = 'input2'> <br>
+<button (click) = 'summary()'> SUMARY ME! </button>
+<button (click) = 'del()'> DEL ME! </button>

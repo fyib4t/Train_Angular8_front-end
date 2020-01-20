@@ -1,0 +1,8 @@
+<h3>EDITED VALUE</h3>
+<form [formGroup] = "profileForm" (ngSubmit) = "editPlayer()">
+    id: {{playerId}}
+    <input formControlName="id" type="hidden"> <br>
+    name: <input formControlName="name" type="text"> <br>
+    birth: <input formControlName="birth" type="date"> <br>
+    <button type = "submit">edited</button>
+</form>
