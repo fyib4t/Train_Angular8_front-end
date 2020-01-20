@@ -41,9 +41,11 @@ export class PlayerComponent implements OnInit {
    this.player = ply;
   }
 
-  delPlayer(){
-    this.service.deletePlayer(this.profileForm.value).subscribe(res =>{
-      console.log(res) //TEST
+  delPlayer(ply){
+    console.log(ply)
+    this.playerId = ply.getId
+    this.service.deletePlayer(this.playerId).subscribe(res =>{
+      console.log(res); //TEST
     })
   }
 }

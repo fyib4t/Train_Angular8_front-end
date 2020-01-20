@@ -35,8 +35,9 @@ export class EditedComponent implements OnInit {
     })
   }
 
-  editPlayer(){
-    this.playerService.addPlayer(this.profileForm.value).subscribe(res =>{
+  editPlayer(ply){
+    console.log(ply.getId)
+    this.playerService.addPlayer(ply.getId).subscribe(res =>{
       console.log(res)
     })
   }
