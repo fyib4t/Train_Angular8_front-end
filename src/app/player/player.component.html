@@ -35,6 +35,6 @@ dateTime: {{player.dateTime}} <br>
         <td>{{ply.dateTime}}</td>
         <td><button (click) = 'setPlayer(ply)'>View</button></td>
         <td><a href="player/edited/{{ply.id}}">edit</a></td>
-        <td><button (click) = 'delPlayer()'>delete</button></td>
+        <td><button (click) = 'delPlayer(ply.id)'>delete</button></td>
     </tr>
 </table>

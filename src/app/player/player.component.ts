@@ -22,6 +22,20 @@ export class PlayerComponent implements OnInit {
   constructor(private router: ActivatedRoute,private service: PlayerService) { }
 
   ngOnInit() {
+
+    this.router.paramMap.subscribe(params => {
+      this.service.getPlayer(Number(params.get('id'))).subscribe( res =>{
+        this.profileForm.setValue({
+        id: res['id'],
+        name: res['name'],
+        birth: res['birth']
+        })
+        console.log(res);
+        this.playerId = res['id']
+      })
+      console.log(params.get('id'));
+    })
+
     this.player = {
       name: 'Fern',
       birth: '1-16-2020',
@@ -41,11 +55,9 @@ export class PlayerComponent implements OnInit {
    this.player = ply;
   }
 
-  delPlayer(ply){
-    console.log(ply)
-    this.playerId = ply.getId
-    this.service.deletePlayer(this.playerId).subscribe(res =>{
-      console.log(res); //TEST
+  delPlayer(ply){ 
+    window.location.href = "http://localhost:4200/player";
+    this.service.deletePlayer(ply).subscribe(res =>{
     })
   }
 }
